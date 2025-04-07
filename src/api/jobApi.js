@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const JOB_API_URL = "https://remotive.com/api/remote-jobs";
-const LOCAL_API_URL = "http://localhost:5000/api/jobs";
+const LOCAL_API_URL = process.env.REACT_APP_BACKEND_URL || "https://job-finder-o0rs.onrender.com";
 
 export const fetchJobs = async (search = "") => {
   const response = await axios.get(`${JOB_API_URL}?search=${search}`);
@@ -20,3 +20,6 @@ export const fetchSavedJobs = async () => {
   const response = await axios.get(LOCAL_API_URL);
   return response.data;
 };
+
+
+
