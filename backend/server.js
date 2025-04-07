@@ -5,7 +5,8 @@ import path from "path";
 import { fileURLToPath } from "url";
 
 const app = express();
-app.use(cors());
+app.use(cors({ origin: "https://job-finder-seven-ruddy.vercel.app" }));
+
 app.use(express.json());
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -54,7 +55,11 @@ app.delete("/api/jobs/:id", (req, res) => {
   const db = readDB();
   if (!db.jobs.some((job) => job.id.toString() === jobId)) {
     return res.status(404).json({ message: "Job not found" });
+    
   }
+
+  
+
   db.jobs = db.jobs.filter((job) => job.id.toString() !== jobId);
   writeDB(db);
   res.json({ message: "Job deleted successfully" });
