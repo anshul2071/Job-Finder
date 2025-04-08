@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const JOB_API_URL = "https://remotive.com/api/remote-jobs";
-const LOCAL_API_URL = import.meta.env.VITE_BACKEND_URL + "/api/jobs";
+const LOCAL_API_URL = "http://localhost:5000/api/jobs";
 
 export const fetchJobs = async (search = "") => {
   const response = await axios.get(`${JOB_API_URL}?search=${search}`);

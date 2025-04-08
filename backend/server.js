@@ -5,7 +5,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 
 const app = express();
-app.use(cors({ origin: "https://job-finder-seven-ruddy.vercel.app" }));
+app.use(cors());
 
 app.use(express.json());
 const __filename = fileURLToPath(import.meta.url);
