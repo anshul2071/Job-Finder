@@ -44,13 +44,13 @@ cd Job-Finder
    cd backend
    ```
 
-3. **Install Dependencies:**
+2. **Install Dependencies:**
 
    ```bash
    npm install
    ```
 
-4. **Create the Mock Database File:**
+3. **Create the Mock Database File:**
 
    In the backend directory, create a file named `db.json` with the following content:
 
@@ -60,7 +60,7 @@ cd Job-Finder
    }
    ```
 
-5. **Run the Backend Server:**
+4. **Run the Backend Server:**
 
    Start the server in development mode:
 

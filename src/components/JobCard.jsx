@@ -8,6 +8,7 @@ const JobCard = ({ job, deletable = false }) => {
   const dispatch = useDispatch();
   const [snackbar, setSnackbar] = useState({ open: false, message: "", severity: "success" });
 
+
   const handleSave = async () => {
     dispatch(saveJob(job));
     try {

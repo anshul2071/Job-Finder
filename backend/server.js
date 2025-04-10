@@ -3,6 +3,11 @@ import cors from "cors";
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import dotenv from "dotenv";
+
+
+
+dotenv.config();
 
 const app = express();
 app.use(cors());
@@ -57,9 +62,6 @@ app.delete("/api/jobs/:id", (req, res) => {
     return res.status(404).json({ message: "Job not found" });
     
   }
-
-  
-
   db.jobs = db.jobs.filter((job) => job.id.toString() !== jobId);
   writeDB(db);
   res.json({ message: "Job deleted successfully" });

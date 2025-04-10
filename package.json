@@ -16,6 +16,7 @@
     "@mui/material": "^7.0.1",
     "@reduxjs/toolkit": "^2.6.1",
     "axios": "^1.8.4",
+    "dotenv": "^16.4.7",
     "lodash.debounce": "^4.0.8",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
